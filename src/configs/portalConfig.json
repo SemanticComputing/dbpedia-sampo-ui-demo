@@ -3,20 +3,9 @@
     "rootUrl": "",
     "perspectives": {
         "searchPerspectives": [
-            "perspective1",
-            "perspective2",
-            "perspective3",
-            "perspective4",
-            "fullTextSearch"
+            "writers"
         ],
         "onlyInstancePages": [
-            "manuscripts",
-            "collections",
-            "works",
-            "expressions",
-            "events",
-            "actors",
-            "places"
         ]
     },
     "localeConfig": {
@@ -30,7 +19,7 @@
             },
             {
                 "id": "fi",
-                "label": "English",
+                "label": "Finnish",
                 "filename": "localeFI.json"
             }
         ]
@@ -121,7 +110,7 @@
         "yasguiParams": {
             "contentTypeConstruct": "text/turtle",
             "contentTypeSelect": "application/sparql-results+json",
-            "endpoint": "https://ldf.fi/mmm/sparql",
+            "endpoint": "https://dbpedia.org/sparql",
             "requestMethod": "POST",
             "tabTitle": "Exported query"
         }

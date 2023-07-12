@@ -1,48 +1,49 @@
 {
   "languageLabel": "Suomi",
   "html": {
-    "title": "Sampo-UI – A framework for building user interfaces for semantic portals",
+    "title": "Sampo-UI DBpedia demo",
     "description": ""
   },
   "appTitle": {
-    "short": "",
-    "long": "",
-    "subheading": ""
+    "short": "Sampo-UI DBpedia demo",
+    "mobile": "S-UI",
+    "long": "&nbsp; &nbsp; Sampo-UI DBpedia demo &nbsp; &nbsp;",
+    "subheading": "Sampo-UI demo DBpedia-datalla"
   },
   "appDescription": "",
   "appDescription1": "",
   "appDescription2": "",
   "appDescription3": "",
   "appDescription4": "",
-  "selectPerspective": "",
+  "selectPerspective": "Valitse näkymä hakeaksi ja selataksesi ainestoja:",
   "mainPageImageLicence": "",
   "backendErrorText": "",
   "topBar": {
-    "feedback": "",
+    "feedback": "Palaute",
     "info": {
-      "info": "",
-      "blog": "",
+      "info": "Info",
+      "blog": "Blogi",
       "blogUrl": "",
-      "aboutThePortal": ""
+      "aboutThePortal": "Tietoa portaalista"
     },
     "searchBarPlaceHolder": "",
     "searchBarPlaceHolderShort": "",
-    "instructions": ""
+    "instructions": "Ohjeet"
   },
   "facetBar": {
-    "results": "",
-    "activeFilters": "",
-    "removeAllFilters": "",
-    "narrowDownBy": "",
-    "filterOptions": "",
+    "results": "Tulokset",
+    "activeFilters": "Aktiiviset rajaukset:",
+    "removeAllFilters": "Poista kaikki",
+    "narrowDownBy": "Rajaa",
+    "filterOptions": "Rajausvaihtoehdot",
     "filterByName": "",
     "filterByBoundingBox": "",
     "selectionOptions": "",
     "selectAlsoSubconcepts": "",
     "doNotSelectSubconcepts": "",
-    "sortingOptions": "",
-    "sortAlphabetically": "",
-    "sortByNumberOfSearchResults": "",
+    "sortingOptions": "Järjestämisvaihtoehdot",
+    "sortAlphabetically": "Järjestä aakkosjärjestykseen",
+    "sortByNumberOfSearchResults": "Järjestä tulosten määrän perusteella",
     "useDisjunction": "",
     "useConjuction": "",
     "minYear": "",
@@ -74,7 +75,7 @@
     }
   },
   "tabs": {
-    "table": "",
+    "table": "taulukko",
     "map": "",
     "production_places": "",
     "production_places_heatmap": "",
@@ -91,11 +92,24 @@
     "emloLetterNetwork": "",
     "emloSentReceived": "",
     "download": "",
-    "recommendations": ""
+    "recommendations": "",
+    "pie_chart": "ympyräkaavio/pylväsdiagrammi"
   },
   "table": {
     "rowsPerPage": "",
     "of": ""
+  },
+  "apexCharts": {
+    "grouping": "Ryhmittely:",
+    "by": "by",
+    "property": "X-akseli:",
+    "chartType": "Kaavion tyyppi:",
+    "pie": "ympyräkaavio",
+    "bar": "pylväsdiagrammi",
+    "other": "muu",
+    "resultClasses": {
+      "writersByOccupation": "ammatti"
+    }
   },
   "lineChart": {
     "productionCount": "",
@@ -1177,6 +1191,38 @@
         "source": {
           "label": "",
           "description": ""
+        }
+      }
+    },
+    "writers": {
+      "label": "Kirjailijat",
+      "facetResultsType": "kirjailijaa(a)",
+      "shortDescription": "Näkymä kirjailijoiden selaamiseen ja hakemiseen",
+      "longDescription": "",
+      "instancePage": {
+        "label": "Kirjailija",
+        "description": ""
+      },
+      "properties": {
+        "uri": {
+          "label": "URI",
+          "description": "Uniikki tunniste"
+        },
+        "prefLabel": {
+          "label": "Nimi",
+          "description": "Kirjailijan nimi."
+        },
+        "genre": {
+          "label": "Kirjallisuudenlaji",
+          "description": "Kirjallisuudenlaji(t), joita kirjailija on kirjoittanut."
+        },
+        "occupation": {
+          "label": "Ammatti",
+          "description": "Kirjailijan ammatti."
+        },
+        "almaMater": {
+          "label": "Alma mater",
+          "description": "Kirjailijan alma mater."
         }
       }
     }

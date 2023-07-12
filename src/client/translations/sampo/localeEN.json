@@ -1,14 +1,14 @@
 {
   "languageLabel": "English",
   "html": {
-    "title": "Sampo-UI – A framework for building user interfaces for semantic portals",
+    "title": "Sampo-UI DBpedia demo",
     "description": "The Sampo-UI framework makes it possible to create highly customizable, user-friendly, and responsive user interfaces using current state-of-the-art JavaScript libraries and data from SPARQL endpoints."
   },
   "appTitle": {
-    "short": "Sampo-UI",
+    "short": "Sampo-UI DBpedia demo",
     "mobile": "S-UI",
-    "long": "&nbsp; &nbsp; Sampo-UI &nbsp; &nbsp;",
-    "subheading": "\"Here to forge for us the Sampo, Hammer us the lid in colors\""
+    "long": "&nbsp; &nbsp; Sampo-UI DBpedia demo &nbsp; &nbsp;",
+    "subheading": "Sampo-UI demo using DBpedia data"
   },
   "appDescription1": "Sampo is a web service for searching and studying place names. The search results can be viewed as a table, on maps, and as statistical distributions. Historical and current background maps are provided.",
   "appDescription2": "Start by choosing source dataset(s) and input a place name on the search field. Alternatively you can search by area.",
@@ -93,11 +93,24 @@
     "emloLetterNetwork": "Network of letters",
     "emloSentReceived": "Sent and received letters",
     "download": "download",
-    "recommendations": "recommendations"
+    "recommendations": "recommendations",
+    "pie_chart": "pie/bar chart"
   },
   "table": {
     "rowsPerPage": "Rows per page",
     "of": "of"
+  },
+  "apexCharts": {
+    "grouping": "Grouping:",
+    "by": "by",
+    "property": "X-axis:",
+    "chartType": "Chart type:",
+    "pie": "pie chart",
+    "bar": "bar chart",
+    "other": "other",
+    "resultClasses": {
+      "writersByOccupation": "occupation"
+    }
   },
   "lineChart": {
     "productionCount": "Production",
@@ -846,6 +859,38 @@
         "source": {
           "label": "Source",
           "description": "Description"
+        }
+      }
+    },
+    "writers": {
+      "label": "Writers",
+      "facetResultsType": "writer(s)",
+      "shortDescription": "A perspective for browsing and searching writers",
+      "longDescription": "",
+      "instancePage": {
+        "label": "Writer",
+        "description": ""
+      },
+      "properties": {
+        "uri": {
+          "label": "URI",
+          "description": "Uniform Resource Identifier"
+        },
+        "prefLabel": {
+          "label": "Name",
+          "description": "The name of the writer."
+        },
+        "genre": {
+          "label": "Genre",
+          "description": "The genre(s) the author has written."
+        },
+        "occupation": {
+          "label": "Occupation",
+          "description": "The occupation of the writer."
+        },
+        "almaMater": {
+          "label": "Alma mater",
+          "description": "The alma mater of the writer."
         }
       }
     }

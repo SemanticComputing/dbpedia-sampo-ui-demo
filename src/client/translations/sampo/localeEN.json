@@ -882,7 +882,7 @@
         },
         "genre": {
           "label": "Genre",
-          "description": "The genre(s) the author has written."
+          "description": "The genre(s) the writer has written."
         },
         "occupation": {
           "label": "Occupation",

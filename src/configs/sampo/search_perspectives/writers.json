@@ -66,6 +66,23 @@
                             "createChartData": "createApexBarChartData"
                         }
                     ]
+                },
+                "writersByOccupationWithoutUnknown": {
+                    "sparqlQuery": "writersByOccupationWithoutUnknownQuery",
+                    "filterTarget": "writer",
+                    "resultMapper": "mapPieChart",
+                    "sliceVisibilityThreshold": 0.006,
+                    "dropdownForChartTypes": true,
+                    "chartTypes": [
+                        {
+                            "id": "pie",
+                            "createChartData": "createApexPieChartData"
+                        },
+                        {
+                            "id": "bar",
+                            "createChartData": "createApexBarChartData"
+                        }
+                    ]
                 }
             }
         }

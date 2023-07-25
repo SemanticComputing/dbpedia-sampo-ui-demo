@@ -35,19 +35,34 @@ export const writersByOccupationQuery = `
     WHERE {
         <FILTER>
         {
-        ?writer a dbo:Writer ;
-                    dbo:occupation ?category .
-        ?category rdfs:label ?prefLabel .
-        FILTER(LANG(?prefLabel) = 'en')
+            ?writer a dbo:Writer ;
+                        dbo:occupation ?category .
+            ?category rdfs:label ?prefLabel .
+            FILTER(LANG(?prefLabel) = 'en')
         }
         UNION
         {
-        ?writer a dbo:Writer .
-        FILTER NOT EXISTS {
-            ?writer dbo:occupation [] .
+            ?writer a dbo:Writer .
+            FILTER NOT EXISTS {
+                ?writer dbo:occupation [] .
+            }
+            BIND("Unknown" as ?category)
+            BIND("Unknown" as ?prefLabel)
         }
-        BIND("Unknown" as ?category)
-        BIND("Unknown" as ?prefLabel)
+    }
+    GROUP BY ?category ?prefLabel
+    ORDER BY DESC(?instanceCount)
+`
+
+export const writersByOccupationWithoutUnknownQuery = `
+    SELECT ?category ?prefLabel (COUNT(DISTINCT ?writer) as ?instanceCount)
+    WHERE {
+        <FILTER>
+        {
+            ?writer a dbo:Writer ;
+                        dbo:occupation ?category .
+            ?category rdfs:label ?prefLabel .
+            FILTER(LANG(?prefLabel) = 'en')
         }
     }
     GROUP BY ?category ?prefLabel

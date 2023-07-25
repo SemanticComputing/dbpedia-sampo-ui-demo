@@ -109,7 +109,8 @@
     "bar": "bar chart",
     "other": "other",
     "resultClasses": {
-      "writersByOccupation": "occupation"
+      "writersByOccupation": "occupation",
+      "writersByOccupationWithoutUnknown": "occupation (unknown values hidden)"
     }
   },
   "lineChart": {

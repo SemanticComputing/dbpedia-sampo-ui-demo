@@ -108,7 +108,8 @@
     "bar": "pylväsdiagrammi",
     "other": "muu",
     "resultClasses": {
-      "writersByOccupation": "ammatti"
+      "writersByOccupation": "ammatti",
+      "writersByOccupationWithoutUnknown": "ammatti (tuntemattomat arvot piilotettu)"
     }
   },
   "lineChart": {

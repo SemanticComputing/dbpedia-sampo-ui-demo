@@ -83,6 +83,74 @@
                             "createChartData": "createApexBarChartData"
                         }
                     ]
+                },
+                "writersByGenre": {
+                    "sparqlQuery": "writersByGenreQuery",
+                    "filterTarget": "writer",
+                    "resultMapper": "mapPieChart",
+                    "sliceVisibilityThreshold": 0.01,
+                    "dropdownForChartTypes": true,
+                    "chartTypes": [
+                        {
+                            "id": "pie",
+                            "createChartData": "createApexPieChartData"
+                        },
+                        {
+                            "id": "bar",
+                            "createChartData": "createApexBarChartData"
+                        }
+                    ]
+                },
+                "writersByGenreWithoutUnknown": {
+                    "sparqlQuery": "writersByGenreWithoutUnknownQuery",
+                    "filterTarget": "writer",
+                    "resultMapper": "mapPieChart",
+                    "sliceVisibilityThreshold": 0.006,
+                    "dropdownForChartTypes": true,
+                    "chartTypes": [
+                        {
+                            "id": "pie",
+                            "createChartData": "createApexPieChartData"
+                        },
+                        {
+                            "id": "bar",
+                            "createChartData": "createApexBarChartData"
+                        }
+                    ]
+                },
+                "writersByBirthCountry": {
+                    "sparqlQuery": "writersByBirthCountryQuery",
+                    "filterTarget": "writer",
+                    "resultMapper": "mapPieChart",
+                    "sliceVisibilityThreshold": 0.01,
+                    "dropdownForChartTypes": true,
+                    "chartTypes": [
+                        {
+                            "id": "pie",
+                            "createChartData": "createApexPieChartData"
+                        },
+                        {
+                            "id": "bar",
+                            "createChartData": "createApexBarChartData"
+                        }
+                    ]
+                },
+                "writersByBirthCountryWithoutUnknown": {
+                    "sparqlQuery": "writersByBirthCountryWithoutUnknownQuery",
+                    "filterTarget": "writer",
+                    "resultMapper": "mapPieChart",
+                    "sliceVisibilityThreshold": 0.006,
+                    "dropdownForChartTypes": true,
+                    "chartTypes": [
+                        {
+                            "id": "pie",
+                            "createChartData": "createApexPieChartData"
+                        },
+                        {
+                            "id": "bar",
+                            "createChartData": "createApexBarChartData"
+                        }
+                    ]
                 }
             }
         },
@@ -99,7 +167,7 @@
                 "fillEmptyValues": true
             },
             "createChartData": "createSingleLineChartData",
-            "title": "Vuosittaiset esitykset",
+            "title": "Publications per year",
             "xaxisTitle": "Vuosi",
             "xaxisType": "category",
             "xaxisTickAmount": 30,

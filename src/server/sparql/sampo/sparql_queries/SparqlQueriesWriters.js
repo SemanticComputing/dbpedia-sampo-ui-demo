@@ -69,6 +69,84 @@ export const writersByOccupationWithoutUnknownQuery = `
     ORDER BY DESC(?instanceCount)
 `
 
+export const writersByGenreQuery = `
+    SELECT ?category ?prefLabel (COUNT(DISTINCT ?writer) as ?instanceCount)
+    WHERE {
+        <FILTER>
+        {
+            ?writer a dbo:Writer ;
+                        dbo:genre ?category .
+            ?category rdfs:label ?prefLabel .
+            FILTER(LANG(?prefLabel) = 'en')
+        }
+        UNION
+        {
+            ?writer a dbo:Writer .
+            FILTER NOT EXISTS {
+                ?writer dbo:genre [] .
+            }
+            BIND("Unknown" as ?category)
+            BIND("Unknown" as ?prefLabel)
+        }
+    }
+    GROUP BY ?category ?prefLabel
+    ORDER BY DESC(?instanceCount)
+`
+
+export const writersByGenreWithoutUnknownQuery = `
+    SELECT ?category ?prefLabel (COUNT(DISTINCT ?writer) as ?instanceCount)
+    WHERE {
+        <FILTER>
+        {
+            ?writer a dbo:Writer ;
+                        dbo:genre ?category .
+            ?category rdfs:label ?prefLabel .
+            FILTER(LANG(?prefLabel) = 'en')
+        }
+    }
+    GROUP BY ?category ?prefLabel
+    ORDER BY DESC(?instanceCount)
+`
+
+export const writersByBirthCountryQuery = `
+    SELECT ?category ?prefLabel (COUNT(DISTINCT ?writer) as ?instanceCount)
+    WHERE {
+        <FILTER>
+        {
+            ?writer a dbo:Writer ;
+                        dbo:birthPlace/dbo:country ?category .
+            ?category rdfs:label ?prefLabel .
+            FILTER(LANG(?prefLabel) = 'en')
+        }
+        UNION
+        {
+            ?writer a dbo:Writer .
+            FILTER NOT EXISTS {
+                ?writer dbo:birthPlace/dbo:country [] .
+            }
+            BIND("Unknown" as ?category)
+            BIND("Unknown" as ?prefLabel)
+        }
+    }
+    GROUP BY ?category ?prefLabel
+    ORDER BY DESC(?instanceCount)
+`
+
+export const writersByBirthCountryWithoutUnknownQuery = `
+    SELECT ?category ?prefLabel (COUNT(DISTINCT ?writer) as ?instanceCount)
+    WHERE {
+        <FILTER>
+        {
+            ?writer a dbo:Writer ;
+                dbo:birthPlace/dbo:country ?category .
+            ?category rdfs:label ?prefLabel .
+            FILTER(LANG(?prefLabel) = 'en')
+        }
+    }
+    GROUP BY ?category ?prefLabel
+    ORDER BY DESC(?instanceCount)
+`
+
 export const publicationsByYearQuery = `
   SELECT ?category (COUNT (DISTINCT ?book) as ?count) WHERE {
     <FILTER>

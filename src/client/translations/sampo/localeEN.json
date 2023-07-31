@@ -111,7 +111,11 @@
     "other": "other",
     "resultClasses": {
       "writersByOccupation": "occupation",
-      "writersByOccupationWithoutUnknown": "occupation (unknown values hidden)"
+      "writersByOccupationWithoutUnknown": "occupation (unknown values hidden)",
+      "writersByGenre": "genre",
+      "writersByGenreWithoutUnknown": "genre (unknown values hidden)",
+      "writersByBirthCountry": "birth country",
+      "writersByBirthCountryWithoutUnknown": "birth country (unknown values hidden)"
     }
   },
   "lineChart": {
@@ -901,6 +905,34 @@
         "deathCountry": {
           "label": "Death country",
           "description": "The country of death of the writer."
+        }
+      }
+    },
+    "books": {
+      "label": "Books",
+      "facetResultsType": "book(s)",
+      "shortDescription": "A perspective for browsing and searching books",
+      "longDescription": "",
+      "instancePage": {
+        "label": "Book",
+        "description": ""
+      },
+      "properties": {
+        "uri": {
+          "label": "URI",
+          "description": "Uniform Resource Identifier"
+        },
+        "prefLabel": {
+          "label": "Name",
+          "description": "The name of the book."
+        },
+        "author": {
+          "label": "Author",
+          "description": "TAuthor of the book."
+        },
+        "publisher": {
+          "label": "Publisher",
+          "description": "The opublisher of the book."
         }
       }
     }

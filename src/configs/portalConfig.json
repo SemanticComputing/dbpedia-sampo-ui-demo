@@ -3,7 +3,8 @@
     "rootUrl": "",
     "perspectives": {
         "searchPerspectives": [
-            "writers"
+            "writers",
+            "books"
         ],
         "onlyInstancePages": [
         ]

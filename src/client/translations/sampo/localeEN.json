@@ -78,6 +78,7 @@
   "tabs": {
     "table": "table",
     "map": "map",
+    "publications_by_year": "publications years",
     "production_places": "production places",
     "production_places_heatmap": "production heatmap",
     "last_known_locations": "last known locations",
@@ -892,6 +893,14 @@
         "almaMater": {
           "label": "Alma mater",
           "description": "The alma mater of the writer."
+        },
+        "birthCountry": {
+          "label": "Birth country",
+          "description": "The country of birth of the writer."
+        },
+        "deathCountry": {
+          "label": "Death country",
+          "description": "The country of death of the writer."
         }
       }
     }

@@ -85,6 +85,29 @@
                     ]
                 }
             }
+        },
+        "releasesLineChart": {
+            "tabID": 2,
+            "component": "ApexCharts",
+            "tabPath": "publications_by_year",
+            "tabIcon": "ShowChart",
+            "sparqlQuery": "publicationsByYearQuery",
+            "facetClass": "writers",
+            "filterTarget": "author",
+            "resultMapper": "mapLineChart",
+            "resultMapperConfig": {
+                "fillEmptyValues": true
+            },
+            "createChartData": "createSingleLineChartData",
+            "title": "Vuosittaiset esitykset",
+            "xaxisTitle": "Vuosi",
+            "xaxisType": "category",
+            "xaxisTickAmount": 30,
+            "yaxisTitle": "Publications",
+            "seriesTitle": "Publications",
+            "stroke": {
+                "width": 2
+            }
         }
     },
     "properties": [
@@ -178,6 +201,34 @@
             "sortButton": true,
             "sortBy": "instanceCount",
             "sortByPredicate": "dbo:almaMater/rdfs:label",
+            "sortDirection": "desc",
+            "pieChartButton": true
+        },
+        "birthCountry": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "facetLabelPredicate": "rdfs:label",
+            "facetLabelFilter": "FILTER(LANG(?prefLabel_) = 'en')",
+            "predicate": "dbo:birthPlace/dbo:country",
+            "searchField": true,
+            "sortButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "dbo:birthPlace/dbo:country/rdfs:label",
+            "sortDirection": "desc",
+            "pieChartButton": true
+        },
+        "deathCountry": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "facetLabelPredicate": "rdfs:label",
+            "facetLabelFilter": "FILTER(LANG(?prefLabel_) = 'en')",
+            "predicate": "dbo:deathPlace/dbo:country",
+            "searchField": true,
+            "sortButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "dbo:deathPlace/dbo:country/rdfs:label",
             "sortDirection": "desc",
             "pieChartButton": true
         }

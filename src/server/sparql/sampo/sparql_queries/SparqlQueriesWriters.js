@@ -68,3 +68,14 @@ export const writersByOccupationWithoutUnknownQuery = `
     GROUP BY ?category ?prefLabel
     ORDER BY DESC(?instanceCount)
 `
+
+export const publicationsByYearQuery = `
+  SELECT ?category (COUNT (DISTINCT ?book) as ?count) WHERE {
+    <FILTER>
+    ?book dbo:author ?author .
+    ?book dbo:releaseDate ?date .
+    BIND(YEAR(xsd:dateTime(?date)) as ?category)
+  }
+  GROUP BY ?category
+  ORDER BY ?category
+`

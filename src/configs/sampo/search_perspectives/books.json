@@ -1,0 +1,116 @@
+{
+    "id": "books",
+    "endpoint": {
+        "url": "https://dbpedia.org/sparql",
+    	"useAuth": false,
+        "prefixesFile": "SparqlQueriesPrefixes.js"
+    },
+    "sparqlQueriesFile": "SparqlQueriesBooks.js",
+    "baseURI": "http://dbpedia.org/resource/",
+    "URITemplate": "<BASE_URI><LOCAL_ID>",
+    "facetClass": "dbo:Book",
+    "frontPageImage": "main_page/manuscripts-452x262.jpg",
+    "searchMode": "faceted-search",
+    "defaultActiveFacets": [
+        "prefLabel"
+    ],
+    "defaultTab": "table",
+    "defaultInstancePageTab": "table",
+    "resultClasses": {
+        "books": {
+            "paginatedResultsConfig": {
+                "tabID": 0,
+                "component": "ResultTable",
+                "tabPath": "table",
+                "tabIcon": "CalendarViewDay",
+                "propertiesQueryBlock": "bookProperties",
+                "pagesize": 25,
+                "sortBy": null,
+                "sortDirection": null
+            },
+            "instanceConfig": {
+                "propertiesQueryBlock": "bookProperties",
+                "instancePageResultClasses": {
+                    "instancePageTable": {
+                        "tabID": 0,
+                        "component": "InstancePageTable",
+                        "tabPath": "table",
+                        "tabIcon": "CalendarViewDay"
+                    }
+                }
+            }
+        }
+    },
+    "properties": [
+        {
+            "id": "uri",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": true,
+            "sortValues": true,
+            "numberedList": false,
+            "onlyOnInstancePage": true
+        },
+        {
+            "id": "prefLabel",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": false,
+            "sortValues": true,
+            "numberedList": false,
+            "minWidth": 250
+        },
+        {
+            "id": "author",
+            "valueType": "object",
+            "makeLink": false,
+            "externalLink": false,
+            "sortValues": true,
+            "numberedList": false,
+            "minWidth": 250
+        },
+        {
+            "id": "publisher",
+            "valueType": "object",
+            "makeLink": true,
+            "externalLink": false,
+            "sortValues": true,
+            "numberedList": false,
+            "minWidth": 250
+        }
+
+    ],
+    "facets": {
+        "prefLabel": {
+            "sortByPredicate": "rdfs:label"
+        },
+        "author": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "facetLabelPredicate": "rdfs:label",
+            "facetLabelFilter": "FILTER(LANG(?prefLabel_) = 'en')",
+            "predicate": "dbo:author",
+            "searchField": true,
+            "sortButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "dbo:author/rdfs:label",
+            "sortDirection": "desc",
+            "pieChartButton": true
+        },
+        "publisher": {
+            "containerClass": "ten",
+            "facetType": "list",
+            "filterType": "uriFilter",
+            "facetLabelPredicate": "rdfs:label",
+            "facetLabelFilter": "FILTER(LANG(?prefLabel_) = 'en')",
+            "predicate": "dbo:publisher",
+            "searchField": true,
+            "sortButton": true,
+            "sortBy": "instanceCount",
+            "sortByPredicate": "dbo:publisher/rdfs:label",
+            "sortDirection": "desc",
+            "pieChartButton": true
+        }
+    }
+}
